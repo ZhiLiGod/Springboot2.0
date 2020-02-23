@@ -19,7 +19,7 @@ public class UserController {
     this.userRepository = userRepository;
   }
 
-  @PostMapping("person/{name}/save")
+  @PostMapping("/{name}/save")
   @ResponseStatus(HttpStatus.OK)
   public User save(@PathVariable final String name) {
     User user = new User();

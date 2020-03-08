@@ -3,9 +3,21 @@ server:
   servlet:
     context-path: /api
 
-
 spring:
   application:
     name: springboot2
   main:
     banner-mode: off
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true # should always false
+  endpoints:
+    web:
+      exposure:
+        include: "*" # all endpoints
+
+info:
+  app:
+    name: springboot2

@@ -11,14 +11,14 @@ import java.util.concurrent.Future;
 @Service
 public class AsyncService {
 
-  @Async("getAsyncExecutor")
+  @Async(value = "getAsyncExecutor")
   public void asynvProcess() throws Exception {
     log.info("Async process task, current thread {}",
         Thread.currentThread().getName());
     Thread.sleep(2000);
   }
 
-  @Async("getAsyncExecutor")
+  @Async(value = "getAsyncExecutor")
   public Future<Integer> asyncProcessReturn() throws Exception {
     log.info("Async process return task, current thread {}",
         Thread.currentThread().getName());
